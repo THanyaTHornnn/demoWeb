@@ -3,135 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEXTGEN STUDIO | Premium Digital Experience</title>
+    <title>Enterprise Digital Solutions | Portfolio Demo</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;600;700&family=IBM+Plex+Sans+Thai:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #050810; }
-        
-        /* ลูกเล่น 1: พื้นหลังแสงฟุ้งขยับได้ */
-        .orb {
-            position: absolute;
-            width: 500px;
-            height: 500px;
-            border-radius: 50%;
-            filter: blur(80px);
-            opacity: 0.15;
-            z-index: -1;
-            animation: float 20s infinite alternate;
+        :root {
+            --brand-blue: #0066FF;
+            --dark-bg: #020617;
         }
-        @keyframes float {
-            0% { transform: translate(0, 0); }
-            100% { transform: translate(100px, 50px); }
+        body { 
+            font-family: 'Instrument Sans', 'IBM Plex Sans Thai', sans-serif; 
+            background-color: var(--dark-bg);
+            color: #f8fafc;
         }
-
-        /* ลูกเล่น 2: ตัวอักษร Gradient แบบแอนิเมชัน */
-        .text-gradient {
-            background: linear-gradient(to right, #60a5fa, #a855f7, #60a5fa);
-            background-size: 200% auto;
+        .bento-card {
+            background: rgba(30, 41, 59, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 24px;
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        .bento-card:hover {
+            border-color: var(--brand-blue);
+            background: rgba(30, 41, 59, 0.6);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px -20px rgba(0, 102, 255, 0.3);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #fff 0%, #94a3b8 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            animation: shine 4s linear infinite;
-        }
-        @keyframes shine {
-            to { background-position: 200% center; }
-        }
-
-        /* ลูกเล่น 3: Glassmorphism Card */
-        .glass-card {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .glass-card:hover {
-            background: rgba(255, 255, 255, 0.07);
-            border-color: rgba(96, 165, 250, 0.5);
-            transform: translateY(-10px) scale(1.02);
         }
     </style>
 </head>
-<body class="text-slate-200">
+<body class="selection:bg-blue-500/30">
 
-    <div class="orb bg-blue-600 top-[-10%] left-[-10%]"></div>
-    <div class="orb bg-purple-600 bottom-[10%] right-[-10%]" style="animation-delay: -5s;"></div>
-
-    <nav class="fixed w-full z-50 top-0 bg-black/20 backdrop-blur-xl border-b border-white/5">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
-            <div class="text-2xl font-extrabold tracking-tighter text-white">
-                <span class="text-blue-500">N</span>EXTGEN
+    <nav class="fixed w-full z-50 top-0 bg-slate-950/50 backdrop-blur-xl border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-8 h-20 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center font-bold text-white">S</div>
+                <span class="text-xl font-bold tracking-tight">STRATEGIUM</span>
             </div>
-            <div class="hidden md:flex items-center gap-8">
-                <a href="#services" class="text-sm font-medium hover:text-blue-400 transition">Services</a>
-                <a href="#work" class="text-sm font-medium hover:text-blue-400 transition">Works</a>
-                <button class="bg-white text-black px-6 py-2.5 rounded-full text-sm font-bold hover:bg-blue-500 hover:text-white transition-all duration-300 shadow-lg shadow-white/5">
-                    Start a Project
+            <div class="hidden md:flex items-center gap-10">
+                <a href="#" class="text-sm font-medium text-slate-400 hover:text-white transition">โซลูชัน</a>
+                <a href="#" class="text-sm font-medium text-slate-400 hover:text-white transition">ผลงานที่ผ่านมา</a>
+                <button class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-full text-sm font-bold transition-all shadow-lg shadow-blue-600/20">
+                    ติดต่อรับคำปรึกษา
                 </button>
             </div>
         </div>
     </nav>
 
-    <section class="pt-40 pb-20 px-6 max-w-7xl mx-auto text-center">
-        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-8 animate-bounce">
-            <span class="w-2 h-2 rounded-full bg-green-500"></span>
-            <span class="text-xs font-bold tracking-widest uppercase">Open for Hire 2026</span>
-        </div>
-        <h1 class="text-6xl md:text-8xl font-black mb-8 leading-tight tracking-tighter text-white">
-            We Design <br> <span class="text-gradient">Digital Magic.</span>
-        </h1>
-        <p class="text-slate-400 text-xl md:text-2xl max-w-3xl mx-auto mb-12 leading-relaxed font-light">
-            เราไม่ใช่แค่คนทำเว็บ แต่เราคือพาร์ทเนอร์ที่ช่วยเปลี่ยนธุรกิจของคุณให้ดู <span class="text-white font-semibold italic">"พรีเมียม"</span> และ <span class="text-white font-semibold italic">"ทันสมัย"</span> กว่าใคร
-        </p>
-        <div class="flex flex-col md:flex-row gap-6 justify-center">
-            <a href="#services" class="group relative px-10 py-5 bg-blue-600 rounded-2xl font-bold overflow-hidden shadow-2xl shadow-blue-500/20">
-                <div class="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
-                <span class="relative">ดูบริการทั้งหมด</span>
-            </a>
-            <a href="#" class="px-10 py-5 bg-white/5 border border-white/10 rounded-2xl font-bold hover:bg-white/10 transition">
-                นัดปรึกษาฟรี
-            </a>
+    <section class="relative pt-48 pb-32 px-8 max-w-7xl mx-auto overflow-hidden">
+        <div class="absolute top-20 left-1/2 -translate-x-1/2 w-full h-[500px] bg-blue-600/10 blur-[120px] rounded-full -z-10"></div>
+        
+        <div class="text-center max-w-4xl mx-auto">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-bold mb-8 uppercase tracking-[0.2em]">
+                Built for Scalability
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold mb-8 leading-[1.1] tracking-tight gradient-text">
+                ยกระดับธุรกิจของคุณด้วย <br> เว็บไซต์มาตรฐานระดับสากล
+            </h1>
+            <p class="text-slate-400 text-xl md:text-2xl mb-12 max-w-2xl mx-auto leading-relaxed">
+                เราช่วยเปลี่ยนหน้าเว็บธรรมดา ให้เป็นเครื่องมือสร้างรายได้ที่ทรงพลัง ด้วยดีไซน์ที่ตอบโจทย์ Brand Identity และ UX ที่ลื่นไหล
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button class="bg-white text-black px-10 py-4 rounded-2xl font-bold hover:bg-blue-50 transition-colors shadow-xl">
+                    เริ่มงานกับเราวันนี้
+                </button>
+                <button class="bg-slate-900 border border-slate-800 text-white px-10 py-4 rounded-2xl font-bold hover:bg-slate-800 transition">
+                    ดู Demo ธุรกิจต่างๆ
+                </button>
+            </div>
         </div>
     </section>
 
-    <section id="services" class="py-32 px-6 max-w-7xl mx-auto">
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="glass-card p-10 rounded-[40px] relative group">
-                <div class="w-16 h-16 bg-blue-500/10 rounded-2xl flex items-center justify-center mb-8 text-blue-400">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-width="1.5" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
-                    </svg>
+    <section class="py-20 px-8 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-6 h-auto md:h-[600px]">
+            
+            <div class="bento-card md:col-span-8 p-12 flex flex-col justify-end relative overflow-hidden group">
+                <div class="absolute top-0 right-0 p-12 opacity-10 group-hover:opacity-20 transition-opacity">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
                 </div>
-                <h3 class="text-2xl font-bold mb-4 text-white">Full-stack Dev</h3>
-                <p class="text-slate-400 leading-relaxed">พัฒนาด้วย Next.js และ Tailwind CSS ให้เว็บคุณเร็ว แรง ติดหน้าแรก Google ได้ง่ายๆ</p>
-                <div class="mt-8 opacity-0 group-hover:opacity-100 transition-opacity text-blue-400 font-bold flex items-center gap-2">
-                    Learn more <span>→</span>
-                </div>
+                <h3 class="text-3xl font-bold mb-4">Enterprise Grade Security</h3>
+                <p class="text-slate-400 max-w-md">เว็บไซต์ของเรามีการวางโครงสร้างที่ปลอดภัย รองรับการทำธุรกรรมและข้อมูลสำคัญขององค์กรอย่างมั่นใจ</p>
             </div>
 
-            <div class="glass-card p-10 rounded-[40px] border-blue-500/20">
-                <div class="w-16 h-16 bg-purple-500/10 rounded-2xl flex items-center justify-center mb-8 text-purple-400">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-width="1.5" d="M9.53 16.122l9.37-9.37m0 0l-4.685.469m4.685-.469l-.469 4.685" />
-                    </svg>
+            <div class="bento-card md:col-span-4 p-8 flex flex-col justify-center items-center text-center">
+                <div class="w-16 h-16 bg-blue-500/20 rounded-2xl flex items-center justify-center mb-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="text-blue-500" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
                 </div>
-                <h3 class="text-2xl font-bold mb-4 text-white">UI/UX Design</h3>
-                <p class="text-slate-400 leading-relaxed">เน้นงานดีไซน์ที่ดูแพง มีเอกลักษณ์เฉพาะตัว และที่สำคัญ "ใช้งานง่าย" สำหรับลูกค้าทุกคน</p>
+                <h4 class="text-xl font-bold mb-2">Perfect on Mobile</h4>
+                <p class="text-sm text-slate-500 text-pretty">แสดงผลสวยงามในทุกหน้าจอ ไม่ว่าจะเป็นสมาร์ทโฟน แท็บเล็ต หรือพีซี</p>
             </div>
 
-            <div class="glass-card p-10 rounded-[40px]">
-                <div class="w-16 h-16 bg-emerald-500/10 rounded-2xl flex items-center justify-center mb-8 text-emerald-400">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-width="1.5" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
-                    </svg>
-                </div>
-                <h3 class="text-2xl font-bold mb-4 text-white">AI Automation</h3>
-                <p class="text-slate-400 leading-relaxed">พ่วงระบบ AI เพื่อช่วยจัดการข้อมูลลูกค้า หรือสร้าง Chatbot อัจฉริยะตอบโจทย์ธุรกิจ</p>
+            <div class="bento-card md:col-span-4 p-8 flex flex-col justify-center items-center text-center">
+                <div class="w-16 h-16 bg-emerald-500/20 rounded-2xl flex items-center justify-center mb-6 text-emerald-500 font-bold text-xl">99+</div>
+                <h4 class="text-xl font-bold mb-2">High Performance</h4>
+                <p class="text-sm text-slate-500">คะแนน Google Lighthouse สูงลิ่ว โหลดไวทันใจลูกค้า ไม่เสียโอกาสทางการขาย</p>
             </div>
+
+            <div class="bento-card md:col-span-8 p-12 flex flex-col justify-end">
+                <h3 class="text-3xl font-bold mb-4">Tailored to Your Brand</h3>
+                <p class="text-slate-400">เราไม่ใช้เทมเพลตสำเร็จรูป แต่เราออกแบบตามความต้องการเฉพาะของธุรกิจคุณ เพื่อสร้างความโดดเด่นในตลาด</p>
+            </div>
+
         </div>
     </section>
 
     <footer class="py-20 text-center border-t border-white/5">
-        <p class="text-slate-500 text-sm">© 2026 NEXTGEN STUDIO. Crafted with ❤️ by [Your Name]</p>
+        <p class="text-slate-500 mb-4">พร้อมที่จะเปลี่ยนโฉมหน้าธุรกิจของคุณหรือยัง?</p>
+        <div class="text-xl font-bold text-white mb-2">NEXTGEN ENTERPRISE STUDIO</div>
+        <div class="text-slate-600 text-sm italic">Designed for Industry Leaders by [Your Name]</div>
     </footer>
 
 </body>
