@@ -3,137 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEXTGEN STUDIO | รับทำเว็บไซต์ระดับ High-end สำหรับธุรกิจยุคใหม่</title>
+    <title>NEXTGEN STUDIO | Premium Digital Experience</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #050810; }
+        
+        /* ลูกเล่น 1: พื้นหลังแสงฟุ้งขยับได้ */
+        .orb {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.15;
+            z-index: -1;
+            animation: float 20s infinite alternate;
         }
-        /* เพิ่ม Gradients เคลื่อนไหวเล็กน้อย */
-        @keyframes gradient {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+        @keyframes float {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(100px, 50px); }
         }
-        .animate-gradient {
-            background-size: 200% 200%;
-            animation: gradient 6s ease infinite;
+
+        /* ลูกเล่น 2: ตัวอักษร Gradient แบบแอนิเมชัน */
+        .text-gradient {
+            background: linear-gradient(to right, #60a5fa, #a855f7, #60a5fa);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shine 4s linear infinite;
+        }
+        @keyframes shine {
+            to { background-position: 200% center; }
+        }
+
+        /* ลูกเล่น 3: Glassmorphism Card */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass-card:hover {
+            background: rgba(255, 255, 255, 0.07);
+            border-color: rgba(96, 165, 250, 0.5);
+            transform: translateY(-10px) scale(1.02);
         }
     </style>
 </head>
-<body class="bg-[#0b0f1a] text-white overflow-x-hidden">
+<body class="text-slate-200">
 
-    <nav class="sticky top-0 z-50 bg-[#0b0f1a]/80 backdrop-blur-md border-b border-slate-800/50">
-        <div class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
-            <div class="text-2xl font-black italic tracking-tighter">
-                NEXT<span class="text-blue-500 text-not-italic">GEN</span>
+    <div class="orb bg-blue-600 top-[-10%] left-[-10%]"></div>
+    <div class="orb bg-purple-600 bottom-[10%] right-[-10%]" style="animation-delay: -5s;"></div>
+
+    <nav class="fixed w-full z-50 top-0 bg-black/20 backdrop-blur-xl border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <div class="text-2xl font-extrabold tracking-tighter text-white">
+                <span class="text-blue-500">N</span>EXTGEN
             </div>
-            <div class="hidden md:flex gap-10 text-xs uppercase tracking-widest font-semibold text-slate-400">
-                <a href="#services" class="hover:text-white transition">Services</a>
-                <a href="#work" class="hover:text-white transition">Works</a>
-                <a href="#about" class="hover:text-white transition">About</a>
-                <a href="#contact" class="hover:text-blue-400 transition text-white border-b border-blue-500 pb-1">Hire Us</a>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#services" class="text-sm font-medium hover:text-blue-400 transition">Services</a>
+                <a href="#work" class="text-sm font-medium hover:text-blue-400 transition">Works</a>
+                <button class="bg-white text-black px-6 py-2.5 rounded-full text-sm font-bold hover:bg-blue-500 hover:text-white transition-all duration-300 shadow-lg shadow-white/5">
+                    Start a Project
+                </button>
             </div>
-            <button class="md:hidden text-white">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
-                </svg>
-            </button>
         </div>
     </nav>
 
-    <header class="relative max-w-7xl mx-auto px-6 py-28 md:py-40 overflow-hidden">
-        <div class="absolute -top-40 -right-40 w-[600px] h-[600px] bg-blue-600/10 blur-[150px] rounded-full -z-10"></div>
-        <div class="absolute bottom-0 -left-40 w-[400px] h-[400px] bg-indigo-600/10 blur-[120px] rounded-full -z-10"></div>
-
-        <div class="max-w-4xl">
-            <div class="inline-block px-4 py-1.5 mb-8 rounded-full border border-blue-500/30 bg-blue-500/5 text-blue-400 text-xs font-bold tracking-widest uppercase animate-pulse">
-                ✨ Available for Freelance Projects
-            </div>
-            <h1 class="text-6xl md:text-8xl font-black leading-[0.9] mb-10 tracking-tighter">
-                WE CODE <br />
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-400 to-cyan-400 animate-gradient">
-                    POSSIBILITIES.
-                </span>
-            </div>
-            </h1>
-            <p class="text-slate-400 text-xl md:text-2xl mb-12 leading-relaxed max-w-2xl">
-                รับเปลี่ยนไอเดียธุรกิจของคุณให้เป็นเว็บไซต์ระดับ High-end ด้วยเทคโนโลยีล่าสุด
-                ส่งงานไว ดีไซน์หรู และรองรับการขยายตัวในอนาคต (Responsive Design & SEO Friendly)
-            </p>
-            <div class="flex flex-wrap gap-6">
-                <a href="#contact" class="bg-blue-600 hover:bg-blue-500 text-white px-12 py-5 rounded-xl font-bold text-lg shadow-lg shadow-blue-500/20 transition-all hover:-translate-y-1">
-                    เริ่มโปรเจกต์ของคุณ
-                </a>
-                <a href="#work" class="border border-slate-700 hover:bg-slate-800 text-white px-12 py-5 rounded-xl font-bold text-lg transition-all flex items-center gap-2">
-                    ดูผลงาน (Demo)
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                    </svg>
-                </a>
-            </div>
+    <section class="pt-40 pb-20 px-6 max-w-7xl mx-auto text-center">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-8 animate-bounce">
+            <span class="w-2 h-2 rounded-full bg-green-500"></span>
+            <span class="text-xs font-bold tracking-widest uppercase">Open for Hire 2026</span>
         </div>
-    </header>
-
-    <section id="services" class="max-w-7xl mx-auto px-6 py-28 border-t border-slate-800/50">
-        <div class="max-w-xl mb-20">
-            <h2 class="text-4xl md:text-5xl font-extrabold mb-6 tracking-tight border-l-8 border-blue-600 pl-6">
-                OUR EXPERTISE
-            </h2>
-            <p class="text-slate-400 text-lg pl-6">ความเชี่ยวชาญของเราในการสร้างสรรค์ประสบการณ์ดิจิทัลที่ยอดเยี่ยม</p>
+        <h1 class="text-6xl md:text-8xl font-black mb-8 leading-tight tracking-tighter text-white">
+            We Design <br> <span class="text-gradient">Digital Magic.</span>
+        </h1>
+        <p class="text-slate-400 text-xl md:text-2xl max-w-3xl mx-auto mb-12 leading-relaxed font-light">
+            เราไม่ใช่แค่คนทำเว็บ แต่เราคือพาร์ทเนอร์ที่ช่วยเปลี่ยนธุรกิจของคุณให้ดู <span class="text-white font-semibold italic">"พรีเมียม"</span> และ <span class="text-white font-semibold italic">"ทันสมัย"</span> กว่าใคร
+        </p>
+        <div class="flex flex-col md:flex-row gap-6 justify-center">
+            <a href="#services" class="group relative px-10 py-5 bg-blue-600 rounded-2xl font-bold overflow-hidden shadow-2xl shadow-blue-500/20">
+                <div class="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+                <span class="relative">ดูบริการทั้งหมด</span>
+            </a>
+            <a href="#" class="px-10 py-5 bg-white/5 border border-white/10 rounded-2xl font-bold hover:bg-white/10 transition">
+                นัดปรึกษาฟรี
+            </a>
         </div>
+    </section>
+
+    <section id="services" class="py-32 px-6 max-w-7xl mx-auto">
         <div class="grid md:grid-cols-3 gap-8">
-            <div class="group p-10 rounded-3xl bg-slate-900/50 border border-slate-800 hover:border-blue-500/50 transition-all duration-500 relative overflow-hidden">
-                <div class="text-blue-500 mb-8 group-hover:scale-110 transition-transform duration-500">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" strokeLinejoin="round" strokeWidth={1} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+            <div class="glass-card p-10 rounded-[40px] relative group">
+                <div class="w-16 h-16 bg-blue-500/10 rounded-2xl flex items-center justify-center mb-8 text-blue-400">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-width="1.5" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
                     </svg>
                 </div>
-                <h3 class="text-2xl font-bold mb-5 italic">Web Development</h3>
-                <p class="text-slate-400 text-lg leading-relaxed">พัฒนาเว็บไซต์ด้วย React/Next.js ที่มีความเร็วสูง รองรับการเข้าชมพร้อมกันได้มาก และ SEO Friendly</p>
+                <h3 class="text-2xl font-bold mb-4 text-white">Full-stack Dev</h3>
+                <p class="text-slate-400 leading-relaxed">พัฒนาด้วย Next.js และ Tailwind CSS ให้เว็บคุณเร็ว แรง ติดหน้าแรก Google ได้ง่ายๆ</p>
+                <div class="mt-8 opacity-0 group-hover:opacity-100 transition-opacity text-blue-400 font-bold flex items-center gap-2">
+                    Learn more <span>→</span>
+                </div>
             </div>
-            <div class="group p-10 rounded-3xl bg-slate-900/50 border border-slate-800 hover:border-indigo-500/50 transition-all duration-500 relative overflow-hidden">
-                <div class="text-indigo-500 mb-8 group-hover:scale-110 transition-transform duration-500">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
+
+            <div class="glass-card p-10 rounded-[40px] border-blue-500/20">
+                <div class="w-16 h-16 bg-purple-500/10 rounded-2xl flex items-center justify-center mb-8 text-purple-400">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-width="1.5" d="M9.53 16.122l9.37-9.37m0 0l-4.685.469m4.685-.469l-.469 4.685" />
                     </svg>
                 </div>
-                <h3 class="text-2xl font-bold mb-5 italic">UI/UX Design</h3>
-                <p class="text-slate-400 text-lg leading-relaxed">เน้นการออกแบบที่ใช้งานง่าย สวยงาม ทันสมัย และช่วยเพิ่มยอดขาย (Conversion Rate) ให้กับธุรกิจจริง</p>
+                <h3 class="text-2xl font-bold mb-4 text-white">UI/UX Design</h3>
+                <p class="text-slate-400 leading-relaxed">เน้นงานดีไซน์ที่ดูแพง มีเอกลักษณ์เฉพาะตัว และที่สำคัญ "ใช้งานง่าย" สำหรับลูกค้าทุกคน</p>
             </div>
-            <div class="group p-10 rounded-3xl bg-slate-900/50 border border-slate-800 hover:border-cyan-500/50 transition-all duration-500 relative overflow-hidden">
-                <div class="text-cyan-500 mb-8 group-hover:scale-110 transition-transform duration-500">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" strokeLinejoin="round" strokeWidth={1} d="M13 10V3L4 14h7v7l9-11h-7z" />
+
+            <div class="glass-card p-10 rounded-[40px]">
+                <div class="w-16 h-16 bg-emerald-500/10 rounded-2xl flex items-center justify-center mb-8 text-emerald-400">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-width="1.5" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
                     </svg>
                 </div>
-                <h3 class="text-2xl font-bold mb-5 italic">Optimization</h3>
-                <p class="text-slate-400 text-lg leading-relaxed">ปรับแต่งความแรงของเว็บไซต์เดิมให้รวดเร็วขึ้น พร้อมระบบ Security ที่แน่นหนา ป้องกันการโจมตี</p>
+                <h3 class="text-2xl font-bold mb-4 text-white">AI Automation</h3>
+                <p class="text-slate-400 leading-relaxed">พ่วงระบบ AI เพื่อช่วยจัดการข้อมูลลูกค้า หรือสร้าง Chatbot อัจฉริยะตอบโจทย์ธุรกิจ</p>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="bg-slate-950 py-28 border-t border-slate-800/50">
-        <div class="max-w-3xl mx-auto px-6 text-center">
-            <div class="text-blue-500 mb-6 font-semibold uppercase tracking-widest text-sm">READY TO START?</div>
-            <h2 class="text-5xl md:text-6xl font-black mb-10 tracking-tighter">บอกไอเดียของคุณให้เราฟัง</h2>
-            <p class="text-slate-400 text-xl mb-12 leading-relaxed">เราพร้อมให้คำปรึกษาฟรี! และประเมินราคาตามจริง ไม่บานปลาย</p>
-            <div class="inline-flex items-center gap-3 bg-slate-900 border border-slate-800 px-8 py-5 rounded-2xl text-2xl font-semibold shadow-inner">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-                contact@nextgen.studio
-            </div>
-            <div class="mt-6 text-slate-500">หรือทักแชท LINE: @nextgen_studio</div>
-        </div>
-    </section>
-
-    <footer class="max-w-7xl mx-auto px-6 py-12 text-center text-slate-600 text-sm border-t border-slate-800/50">
-        <p>© 2026 NEXTGEN STUDIO - Developed by [Your Name] (CS Sophomore Student)</p>
-        <p class="mt-2 text-xs">This is a Demo for Portfolio purposes.</p>
+    <footer class="py-20 text-center border-t border-white/5">
+        <p class="text-slate-500 text-sm">© 2026 NEXTGEN STUDIO. Crafted with ❤️ by [Your Name]</p>
     </footer>
 
 </body>
